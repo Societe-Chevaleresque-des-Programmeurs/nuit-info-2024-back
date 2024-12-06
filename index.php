@@ -35,6 +35,7 @@ if (isset($_POST["user"]) && isset($_POST["password"]) && isset($_POST["captcha"
         }
         else {
             $html = str_replace("{{ login_error }}", "Database Error", $html);
+
             echo $html;
         }
         mysqli_stmt_close($query);
@@ -45,4 +46,3 @@ function verifyCaptcha($captcha_response) {
     // TODO : implémenter la fonction
     return true;
 }
-?>
